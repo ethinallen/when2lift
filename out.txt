@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Connect2
+  </title>
+  <link href="css/bootstrap.css" rel="stylesheet"/>
+  <link href="css/jquery.barCharts.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="container" id="container">
+   <div class="row">
+    <h2>
+     <center>
+      Live Facility Counts
+     </center>
+    </h2>
+   </div>
+   <hr/>
+   <div class="row">
+    <form method="POST" target="_self">
+     <div class="col-sm-12 col-md-2 col-md-offset-1">
+      <label for="key">
+       Select Facility
+      </label>
+     </div>
+     <div class="col-sm-12 col-md-8 col-sm-6">
+      <div class="form-group">
+       <label for="facility">
+       </label>
+       <input id="key" name="key" type="hidden" value="92433390-628E-42FC-918F-9111CBAF9D63"/>
+       <input id="type" name="type" type="hidden" value="circle"/>
+       <select class="form-control" id="facility" name="facility" onchange="this.form.submit()">
+        <option selected="" value="All">
+         All
+        </option>
+        <option value="807">
+         Snow Family Outdoor Fitness &amp; Wellness Ctr
+        </option>
+        <option value="687">
+         Fike Recreation Center
+        </option>
+        <option value="806">
+         Douthit Hills Fitness Center
+        </option>
+       </select>
+      </div>
+     </div>
+    </form>
+   </div>
+   <hr/>
+   <div class="row" style="display:block">
+    <div class="col-sm-12 col-md-12">
+     <div class="panel-group">
+      <div class="panel panel-default">
+       <div class="panel-heading">
+        Location Count (Circle  Chart)
+       </div>
+       <div class="panel-body">
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Snow Beach
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Equipment Rental Center
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Championship Field
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Rental Kayaks - Single
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Rental Kayaks - Tandem
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Rental Paddleboards
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Rental Canoes
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Rental Boats - Other
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 04:50 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="18.75" data-percent="18.75">
+          </div>
+          <div style="text-align:center;">
+           Lap Pool
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 6
+           <br/>
+           Updated: 12/06/2019 06:23 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="25" data-percent="25">
+          </div>
+          <div style="text-align:center;">
+           Cardio Areas
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 15
+           <br/>
+           Updated: 12/06/2019 06:04 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Selecterize Areas
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 06:04 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="12.5" data-percent="12.5">
+          </div>
+          <div style="text-align:center;">
+           Sauna
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 2
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="20" data-percent="20">
+          </div>
+          <div style="text-align:center;">
+           Free Weight and Core Areas
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 8
+           <br/>
+           Updated: 12/06/2019 06:04 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Steam Room
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="8" data-percent="8">
+          </div>
+          <div style="text-align:center;">
+           Functional Training Space
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 4
+           <br/>
+           Updated: 12/06/2019 06:04 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#ff7f27" data-lastcount="53.3333333333" data-percent="53.3333333333">
+          </div>
+          <div style="text-align:center;">
+           Climbing Wall
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 16
+           <br/>
+           Updated: 12/06/2019 04:44 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="21.25" data-percent="21.25">
+          </div>
+          <div style="text-align:center;">
+           Fitness Atrium Free Weights
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 17
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="18.4615384615" data-percent="18.4615384615">
+          </div>
+          <div style="text-align:center;">
+           Fitness Atrium Selectorized Weight Machines
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 12
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="14.7058823529" data-percent="14.7058823529">
+          </div>
+          <div style="text-align:center;">
+           Cardio Areas (excluding MPR/FTS)
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 10
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="7.69230769231" data-percent="7.69230769231">
+          </div>
+          <div style="text-align:center;">
+           Multipurpose Room
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 5
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#ff7f27" data-lastcount="55" data-percent="55">
+          </div>
+          <div style="text-align:center;">
+           Core Hallway
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 11
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="16.6666666667" data-percent="16.6666666667">
+          </div>
+          <div style="text-align:center;">
+           Boxing Area
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 1
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="15" data-percent="15">
+          </div>
+          <div style="text-align:center;">
+           Indoor Track
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 6
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#a349a4" data-lastcount="100" data-percent="100">
+          </div>
+          <div style="text-align:center;">
+           Main Gym Court 1
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 10
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#a349a4" data-lastcount="100" data-percent="100">
+          </div>
+          <div style="text-align:center;">
+           Main Gym Court 2
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 10
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#a349a4" data-lastcount="100" data-percent="100">
+          </div>
+          <div style="text-align:center;">
+           Main Gym Court 3
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 10
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#a349a4" data-lastcount="100" data-percent="100">
+          </div>
+          <div style="text-align:center;">
+           Main Gym Court 4
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 10
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Main Gym Court 5
+           <br/>
+           <span style="color:red">
+            (Closed)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="30" data-percent="30">
+          </div>
+          <div style="text-align:center;">
+           Club Gym
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 3
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Lower Fitness Studio
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="2.04081632653" data-percent="2.04081632653">
+          </div>
+          <div style="text-align:center;">
+           Functional Training Space
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 1
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="37.5" data-percent="37.5">
+          </div>
+          <div style="text-align:center;">
+           Racquetball Courts
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 6
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+        <div class="col-md-3 col-sm-6">
+         <center>
+          <div class="circleChart" data-fcolor="#568761" data-lastcount="0" data-percent="0">
+          </div>
+          <div style="text-align:center;">
+           Outdoor Fitness Rig
+           <br/>
+           <span style="color:green">
+            (Open)
+           </span>
+           <br/>
+           Last Count: 0
+           <br/>
+           Updated: 12/06/2019 06:03 PM
+          </div>
+         </center>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+   </div>
+   <div class="row">
+    <div class="col-md-12 col-sm-12">
+     <center>
+      Powered by
+      <a href="http://www.connect2concepts.com/" target="_blank">
+       Connect2Concepts
+      </a>
+     </center>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+<script src="js/jquery-3.1.0.min.js">
+</script>
+<script src="js/jquery.circlechart.js">
+</script>
+<script src="js/jquery.easing.min.js">
+</script>
+<script src="js/jquery.barChart.js">
+</script>
+<script src="js/bootstrap.js">
+</script>
+<script>
+ jQuery('.barChart').barChart({easing: 'easeOutQuart'});
+</script>
+<script>
+ $('.circleChart').each(function(value,index){
+        var fcolor=$(this).data('fcolor');
+        $(this).percentcircle({
+            animate: true,
+            diameter: 100,
+            guage: 3,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: fcolor,
+            percentSize: '18px',
+            percentWeight: 'normal'
+        })
+    });
+</script>
