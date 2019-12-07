@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+import time
 
 class getter():
 
@@ -27,6 +27,7 @@ class getter():
         )
         self.responseContent = self.getContent()
         self.parseContent()
+        self.writeContent()
 
     def getContent(self):
         responseContent = requests.get('https://connect2concepts.com/connect2/', headers=self.headers, params=self.params, cookies=self.cookies).content
@@ -34,8 +35,14 @@ class getter():
 
     def parseContent(self):
         soup = BeautifulSoup(self.responseContent, features = 'html.parser')
-        for thing in soup.find_all('div', {'style':'text-align:center;'}):
-            print(thing)
+        self.data = soup.find_all('div', {'style':'text-align:center;'})
+
+    def writeContent(self):
+        with open('needToMakeDynamoDB.txt', 'a') as f:
+            f.write(str(time.time()) + '\n')
+            for d in self.data:
+                f.write(d.text + '\n')
+            f.write('\n\n')
 
 
 if __name__ == '__main__':
