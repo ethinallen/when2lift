@@ -7,6 +7,10 @@ from datetime import datetime
 
 class getter():
     def __init__(self):
+        
+        self.session = boto3.session.Session(profile_name='when2lift_iam')
+        self.dynamodb = self.session.resource('dynamodb')
+        self.table = self.dynamodb.Table('when2lift')
 
         # session id and other fancy stuff that my browser used to load the fike page
         self.cookies = {
@@ -54,7 +58,7 @@ class getter():
     #         f.write('\n\n')
 
     def csvWriteContent(self):
-        with open('dummyTable.csv', 'a') as f:
+        with open('backup.csv', 'a') as f:
             my_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             #fmtTime = (str(datetime.utcnow()))
             for d in self.data:
@@ -70,12 +74,21 @@ class getter():
                     occupants+=fields[1][offset]
                     offset+=1
 
-                fmtTime = datetime.strptime(fields[2],'%m/%d/%Y %H:%M %p')
+                fmtTime = str(datetime.strptime(fields[2],'%m/%d/%Y %H:%M %p'))
 
+                self.postToDB(fmtTime, location, occupants, status)
                 my_writer.writerow([fmtTime, location, occupants, status])
 
-
-
+    def postToDB(self, fmtTime, location, occupants, status):
+        self.table.put_item(
+           Item={
+                'id' : str(datetime.utcnow()),
+                'time' : fmtTime,
+                'location' : location,
+                'occupants' : occupants,
+                'status' : status
+            }
+)
 
 
 
