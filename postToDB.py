@@ -18,9 +18,11 @@ table = dynamodb.Table('when2lift')
 print(table.creation_date_time)
 table.put_item(
    Item={
-   		'id' : '2',
-        'time': '0',
-        'location': 'pit',
-        'occupants': 0,
+   		'id' : '2019-12-06 06:04:00',
+        'location' : 'Cardio Areas',
+        'occupants' : '15',
+        'status' : 'Open'
     }
 )
+
+#2019-12-06 06:04:00,Cardio Areas,15,Open
