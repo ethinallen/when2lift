@@ -1,7 +1,8 @@
 import boto3
 
 # Get the service resource.
-dynamodb = boto3.resource('dynamodb')
+session = boto3.session.Session(profile_name='when2lift_iam')
+dynamodb = session.resource('dynamodb')
 
 # Instantiate a table resource object without actually
 # creating a DynamoDB table. Note that the attributes of this table
