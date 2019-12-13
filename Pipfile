@@ -9,6 +9,8 @@ verify_ssl = true
 requests = "*"
 bs4 = "*"
 boto3 = "*"
+csv = "*"
+datetime = "*"
 
 [requires]
 python_version = "3.6"
