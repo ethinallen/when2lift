@@ -2,9 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import boto3
+import csv
+from datetime import datetime
 
 class getter():
-
     def __init__(self):
 
         # session id and other fancy stuff that my browser used to load the fike page
@@ -50,6 +51,31 @@ class getter():
             for d in self.data:
                 f.write(d.text + '\n')
             f.write('\n\n')
+
+    def csvWriteContent(self):
+        with open('dummyTable.csv', 'a') as f:
+            my_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            #fmtTime = (str(datetime.utcnow()))
+            for d in self.data:
+                fields = d.split(": ",2)
+                locationInfo = fields[0].replace(")","(").split("(")
+                location = locationInfo[0]
+                status = locationInfo[1]
+
+                offset = 0
+                occupants = ""
+                while fields[1][offset].isdigit() == True:
+                    occupants+=fields[1][offset]
+                    offset+=1
+
+                fmtTime = datetime.strptime(fields[2],'%m/%d/%Y %H:%M %p')
+
+                my_writer.writerow([fmtTime, location, occupants, status])
+
+
+
+
+
 
 
 if __name__ == '__main__':
