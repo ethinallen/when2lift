@@ -32,7 +32,7 @@ class getter():
 
         self.responseContent = self.getContent()
         self.parseContent()
-        self.writeContent()
+        self.csvWriteContent()
 
     # make the get request with to the api found in the fike page
     def getContent(self):
@@ -44,19 +44,21 @@ class getter():
         soup = BeautifulSoup(self.responseContent, features = 'html.parser')
         self.data = soup.find_all('div', {'style':'text-align:center;'})
 
-    # write the content to the temporary txt file
-    def writeContent(self):
-        with open('needToMakeDynamoDB.txt', 'a') as f:
-            f.write(str(time.time()) + '\n')
-            for d in self.data:
-                f.write(d.text + '\n')
-            f.write('\n\n')
+    # Deprecated - Replaced by csvWriteContent()
+    # # write the content to the temporary txt file
+    # def writeContent(self):
+    #     with open('needToMakeDynamoDB.txt', 'a') as f:
+    #         f.write(str(time.time()) + '\n')
+    #         for d in self.data:
+    #             f.write(d.text + '\n')
+    #         f.write('\n\n')
 
     def csvWriteContent(self):
         with open('dummyTable.csv', 'a') as f:
             my_writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
             #fmtTime = (str(datetime.utcnow()))
             for d in self.data:
+                d = d.text
                 fields = d.split(": ",2)
                 locationInfo = fields[0].replace(")","(").split("(")
                 location = locationInfo[0]
